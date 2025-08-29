@@ -1,0 +1,6 @@
+//partial: 4 archivos dependientes entre si, para lograr tener una lectura mas clara y precisa
+
+@use "variable" as v;
+@use "header";
+@use "main";
+@use "footer";

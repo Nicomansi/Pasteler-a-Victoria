@@ -1,0 +1,44 @@
+@use "variable" as v;
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        .logo{
+            height: v.$diametrologo;
+        }
+    }
+    h1{
+        font-family: v.$titulo;
+        color: v.$colorfuenteprincipal;
+        font-size: 500%;
+        text-align: center;
+    }
+    h2{
+        font-family: v.$subtitulo;
+        color: v.$colorfuenteprincipal;
+        text-align: center;
+        padding: 10px;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        li{
+            .nav{
+                @extend %btn-nav;
+                        margin: 0 10px;
+                        background: v.$colorfuenteprincipal;
+                        border-radius: 5px;
+                        padding: 3px;
+                }
+            }
+        }
+        @include v.mobile{
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        h1{display: none;}
+        h2{display: none;}
+    }
+}

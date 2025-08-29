@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+$titulo: Dancing Script;
+$colorfuenteprincipal: rgb(246, 147, 147);
+$colorcontrols: color white;
+$subtitulo: libertinus mono; 
+$body: dm sans;
+$heighheaderfooter: 190px;
+$heighfooter:100px;
+$colorheader: rgb(187, 36, 91);
+$colortexto: black;
+$diametrologo: 150px;
+$diametrorrhh: 80px;
+$margen30: 30px;
+$fondo: url(../Assest/fondo\ pasteleria.png);
+//$portada: url(../Assest/portada.png);
+
+@mixin mobile{
+    @media (max-width: 425px){
+        @content;
+    }
+}
+
+%btn-nav{
+    color: $colorheader;
+    font-family: $body;
+    text-decoration: none;
+    border: 1px solid $colorfuenteprincipal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    margin: 0;
+    padding: 0;
+    font-family: $body;
+    background-image: $fondo;
+    height: 100%;
+    @include mobile{
+        height: auto;
+    }
+}
+header{
+    height: $heighheaderfooter;
+    background-color: $colorheader;
+    //background-image: $portada;
+    @include mobile{
+        height: auto;
+    }
+
+}
+footer{
+    height: $heighfooter;
+    background-color: $colorheader;
+    @include mobile{
+    height: auto;
+    }
+}

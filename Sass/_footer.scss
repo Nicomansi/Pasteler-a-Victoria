@@ -1,0 +1,72 @@
+@use "variable" as v;
+
+.pie{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    h2{
+        font-family: v.$body;
+        color: v.$colortexto;
+        font-size: 15px;
+    }
+    nav{
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        .rrhh{
+            height: v.$diametrorrhh;
+        }
+        .Whatsapp{
+            height: v.$diametrorrhh;
+            position:fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+        .Whatsapp{
+            animation: Whatsapp 5s infinite;
+        }
+    }
+            @keyframes Whatsapp {
+        0%{
+            transform: translateX(0);
+        }
+        5%{
+            transform: translateX(40px);
+        }
+        10%{
+            transform: translateX(0);
+        }
+        15%{
+            transform: translateX(40px);
+        }
+        20%{
+            transform: translateX(0);
+        }
+        
+        
+        100%{
+            transform: translateX(0);
+        }
+    }
+    @include v.mobile{
+        flex-direction: column;
+        gap: 15px;
+        h2{
+            gap: 50px;
+        }
+        .rrhh{
+        height: 80px;
+        width: auto;
+        margin-top: 10px;
+}
+        .Whatsapp{
+        position:fixed;
+        bottom: 10px;
+        right: 10px;
+        height: 100px;
+        width: auto;
+        }
+
+    }
+
+}
